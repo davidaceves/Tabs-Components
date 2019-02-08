@@ -22,7 +22,7 @@ class Dropdown {
     //this.content.classList.toggle('dropdown-hidden');
     let dropDown = document.querySelector('.dropdown-content');
 
-    if (!dropDown.classList.contains("active")) {
+    if (!dropDown.classList.contains('active')) {
       dropDown.classList.add('active');
       
       TweenMax.to(dropDown, 1, {className: '-=dropdown-hidden'});
@@ -31,14 +31,6 @@ class Dropdown {
 
       TweenMax.to(dropDown, .5, {className: '+=dropdown-hidden'});
     }
-
-    
-
-    //console.log(dropDown.hasClass('.dropdown-hidden'));
-
-    // dropDown.classList.contains('.dropdown-hidden') ? TweenMax.to(".dropdown-content", 1.5, {className: '-=dropdown-hidden'}) : TweenMax.to(".dropdown-content", 1.5, {className: '+=dropdown-hidden'}) 
-
-    
   }
 }
 
