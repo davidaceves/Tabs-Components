@@ -19,7 +19,26 @@ class Dropdown {
   toggleContent() {
     
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    //this.content.classList.toggle('dropdown-hidden');
+    let dropDown = document.querySelector('.dropdown-content');
+
+    if (!dropDown.classList.contains("active")) {
+      dropDown.classList.add('active');
+      
+      TweenMax.to(dropDown, 1, {className: '-=dropdown-hidden'});
+    } else  {
+      dropDown.classList.remove('active');
+
+      TweenMax.to(dropDown, .5, {className: '+=dropdown-hidden'});
+    }
+
+    
+
+    //console.log(dropDown.hasClass('.dropdown-hidden'));
+
+    // dropDown.classList.contains('.dropdown-hidden') ? TweenMax.to(".dropdown-content", 1.5, {className: '-=dropdown-hidden'}) : TweenMax.to(".dropdown-content", 1.5, {className: '+=dropdown-hidden'}) 
+
+    
   }
 }
 
